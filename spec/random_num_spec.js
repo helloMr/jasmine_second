@@ -9,6 +9,12 @@ describe("Given a random function when it working results random numbers ",funct
         }
         expect(N).toBe(4);
     });
+    it("Given a random number when every number probability added results 10", function (){
+        var all_num=collect_random_num(1000);
+        var per_chance=count_chance(all_num);
+        var rightProb=count_prob(per_chance,1000);
+        expect(rightProb).toBe(10);
+    });
 });
 
 
