@@ -26,16 +26,16 @@ describe("Given a random function when it working results random numbers ",funct
         }
         expect(Tag).toBe(false);
     });
-    it("Given a random number when every number within 0-9 results false", function () {
-        var is_NAN=false;
+    it("Given a random number when test each number is a number results true", function () {
+        var is_number = false;
         var random_number = createRandomNum();
-        for(var i=0;i<random_number.length;i++){
-            if(random_number[i]>=0&&random_number[i]<=9){
-                is_NAN=false
+        for (var i = 0; i < random_number.length; i++) {
+            if (isNaN(random_number[i]) == false) {
+                is_number = true
             }
-            else is_NAN=true;
+            else is_number = false;
         }
-        expect(is_NAN).toBe(false);
+        expect(is_number).toBe(true);
     });
 });
 
