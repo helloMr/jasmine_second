@@ -15,7 +15,7 @@ describe("Given a random function when it working results random numbers ",funct
         var rightProb=count_prob(per_chance,1000);
         expect(rightProb).toBe(10);
     });
-    it("Given a random number when every number compared results 0", function () {
+    it("Given a random number when every number compared results false", function () {
         var random_number = createRandomNum();
         var Tag=false;
         for(var i=0;i<4;i++){
